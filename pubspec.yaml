@@ -40,6 +40,16 @@ dependencies:
   flutter_image_slideshow: any
   google_nav_bar: ^5.0.6
   carousel_slider: ^4.2.1
+  flutter_lints: ^2.0.0
+  blur: ^3.0.0
+  bottom_drawer: ^0.0.5
+  path_provider: ^2.0.11
+  sqflite: ^2.0.3+1
+  intl: ^0.15.7
+  dropdown_button2: ^1.9.2
+  http: ^0.13.5
+  image_picker: any
+
 
 dev_dependencies:
   flutter_test:

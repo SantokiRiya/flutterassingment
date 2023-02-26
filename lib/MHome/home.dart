@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutterassingment/startpage.dart';
-import 'caption.dart';
-import 'login.dart';
-import 'spiderdetails.dart';
-import 'witch.dart';
+import 'package:gamezone/api/apicall.dart';
+import 'package:gamezone/logsign/login.dart';
+import 'package:gamezone/MHome/spiderdetails.dart';
+import 'package:gamezone/startpage.dart';
+import 'package:gamezone/MHome/witch.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import '../api/newuser.dart';
+import '../logsign/myprofile.dart';
+import 'Captain.dart';
 
 class HomePage extends StatefulWidget{
   const HomePage({super.key});
@@ -44,7 +47,7 @@ class _HomeState extends State<HomePage> {
                                     ]))),
                       ),
                       Container(
-                        padding: EdgeInsets.only(left: 15.h,top: 60),
+                        padding: EdgeInsets.only(left: 13.h,top: 60),
                         child: Icon(
                           Icons.notification_add_outlined,
                           size: 30,
@@ -128,7 +131,7 @@ class _HomeState extends State<HomePage> {
                               borderRadius: BorderRadius.all(Radius.circular(15)),
                               image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('assets/spider.png'),
+                                image: AssetImage('assets/imgs/spider.png'),
                               )),
                           child: Column(
                             children: [
@@ -178,7 +181,7 @@ class _HomeState extends State<HomePage> {
                               borderRadius: BorderRadius.all(Radius.circular(15)),
                               image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('assets/Captain.png'),
+                                image: AssetImage('assets/imgs/Captain.png'),
                               )),
                           child: Column(
                             children: [
@@ -231,7 +234,7 @@ class _HomeState extends State<HomePage> {
                               borderRadius: BorderRadius.all(Radius.circular(15)),
                               image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('assets/witch.png'),
+                                image: AssetImage('assets/imgs/witch.png'),
                               )),
                           child: Column(
                             children: [
@@ -280,7 +283,7 @@ class _HomeState extends State<HomePage> {
                               borderRadius: BorderRadius.all(Radius.circular(15)),
                               image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('assets/spider.png'),
+                                image: AssetImage('assets/imgs/spider.png'),
                               )),
                           child: Column(
                             children: [
@@ -348,7 +351,7 @@ class _HomeState extends State<HomePage> {
                               width: 25.w,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(Radius.circular(15)),
-                                  image: DecorationImage(image: AssetImage('assets/volly.png'),fit: BoxFit.fitWidth)
+                                  image: DecorationImage(image: AssetImage('assets/imgs/volly.png'),fit: BoxFit.fitWidth)
                               ),
                             ),
                           ),
@@ -369,7 +372,7 @@ class _HomeState extends State<HomePage> {
                               width: 25.w,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(Radius.circular(15)),
-                                  image: DecorationImage(image: AssetImage('assets/Gun.png'),fit: BoxFit.fitWidth)
+                                  image: DecorationImage(image: AssetImage('assets/imgs/Gun.png'),fit: BoxFit.fitWidth)
                               ),
                             ),
                           ),
@@ -390,7 +393,7 @@ class _HomeState extends State<HomePage> {
                               width: 25.w,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(Radius.circular(15)),
-                                  image: DecorationImage(image: AssetImage('assets/volly.png'),fit: BoxFit.fitWidth)
+                                  image: DecorationImage(image: AssetImage('assets/imgs/volly.png'),fit: BoxFit.fitWidth)
                               ),
                             ),
                           ),
@@ -411,7 +414,7 @@ class _HomeState extends State<HomePage> {
                               width: 25.w,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(Radius.circular(15)),
-                                  image: DecorationImage(image: AssetImage('assets/action.png'),fit: BoxFit.fitWidth)
+                                  image: DecorationImage(image: AssetImage('assets/imgs/action.png'),fit: BoxFit.fitWidth)
                               ),
                             ),
                           ),
@@ -436,13 +439,17 @@ class _HomeState extends State<HomePage> {
                     Container(
                       height: 5.h,
                       child: CircleAvatar(
-                        backgroundColor: Colors.black,
+                        backgroundColor: Colors.white,
                         child: Center(
                           child: IconButton(
                             icon: Icon(
-                              Icons.videogame_asset,
-                              color: Colors.white,
-                            ), onPressed: () {},
+                              Icons.person,
+                              color: Colors.black,
+                            ), onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                              return Myprofile();
+                            },));
+                          },
                           ),
                         ),
                       ),
@@ -455,9 +462,13 @@ class _HomeState extends State<HomePage> {
                         child: Center(
                           child: IconButton(
                             icon: Icon(
-                              Icons.wine_bar,
+                              Icons.add_circle,
                               color: Colors.black,
-                            ), onPressed: () {},
+                            ), onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                              return Apicall();
+                            },));
+                          },
                           ),
                         ),
                       ),
@@ -485,9 +496,13 @@ class _HomeState extends State<HomePage> {
                         child: Center(
                           child: IconButton(
                             icon: Icon(
-                              Icons.settings,
+                              Icons.add,
                               color: Colors.black,
-                            ), onPressed: () {},
+                            ), onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                              return Newuser();
+                            },));
+                          },
                           ),
                         ),
                       ),
@@ -500,7 +515,7 @@ class _HomeState extends State<HomePage> {
                         child: Center(
                           child: IconButton(
                             icon: Icon(
-                              Icons.sports_baseball,
+                              Icons.settings,
                               color: Colors.black,
                             ), onPressed: () {},
                           ),

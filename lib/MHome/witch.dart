@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class Captaindetails extends StatefulWidget {
-  const Captaindetails({Key? key}) : super(key: key);
+class witchetails extends StatefulWidget {
+  const witchetails({Key? key}) : super(key: key);
 
   @override
-  State<Captaindetails> createState() => _GamesState();
+  State<witchetails> createState() => _GamesState();
 }
 
-class _GamesState extends State<Captaindetails> {
+class _GamesState extends State<witchetails> {
   @override
   Widget build(BuildContext context) {
     return ResponsiveSizer(builder: (context, orientation, screenType) {
@@ -22,19 +22,19 @@ class _GamesState extends State<Captaindetails> {
                 Container(
                     height: 190.w,
                     color: Colors.white,
-                    child: Image(image: AssetImage('assets/Captaindetails.png'),
+                    child: Image(image: AssetImage('assets/imgs/witch.png'),
                       width: 100.w,
                       fit: BoxFit.fitHeight,
                     )
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 486),
+                  padding: const EdgeInsets.only(top: 480),
                   child: Container(
                       color: Colors.black38,
                       height: 250,
                       child: Column(
                         children: [
-                          Text('Marvel\'s Captain America ',
+                          Text('ClashRoyel Game from Supershell',
                             style: TextStyle(
                               fontWeight: FontWeight.w700,
                               fontFamily: 'Nunito',

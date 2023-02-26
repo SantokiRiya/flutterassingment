@@ -2,15 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:bottom_drawer/bottom_drawer.dart';
 
-class witchetails extends StatefulWidget {
-  const witchetails({Key? key}) : super(key: key);
+class spiderdetails extends StatefulWidget {
+  const spiderdetails({Key? key}) : super(key: key);
 
   @override
-  State<witchetails> createState() => _GamesState();
+  State<spiderdetails> createState() => _GamesState();
 }
 
-class _GamesState extends State<witchetails> {
+class _GamesState extends State<spiderdetails> {
   @override
   Widget build(BuildContext context) {
     return ResponsiveSizer(builder: (context, orientation, screenType) {
@@ -22,9 +23,9 @@ class _GamesState extends State<witchetails> {
                 Container(
                     height: 190.w,
                     color: Colors.white,
-                    child: Image(image: AssetImage('assets/witch.png'),
+                    child: Image(image: AssetImage('assets/imgs/spider.png'),
                       width: 100.w,
-                      fit: BoxFit.fitHeight,
+                      fit: BoxFit.fitWidth,
                     )
                 ),
                 Padding(
@@ -34,7 +35,7 @@ class _GamesState extends State<witchetails> {
                       height: 250,
                       child: Column(
                         children: [
-                          Text('ClashRoyel Game from Supershell',
+                          Text('Marvel\'s Spider-Man : Miles Morales ',
                             style: TextStyle(
                               fontWeight: FontWeight.w700,
                               fontFamily: 'Nunito',
@@ -92,4 +93,5 @@ class _GamesState extends State<witchetails> {
       );
     });
   }
+
 }

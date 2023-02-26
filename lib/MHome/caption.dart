@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class spiderdetails extends StatefulWidget {
-  const spiderdetails({Key? key}) : super(key: key);
+class Captaindetails extends StatefulWidget {
+  const Captaindetails({Key? key}) : super(key: key);
 
   @override
-  State<spiderdetails> createState() => _GamesState();
+  State<Captaindetails> createState() => _GamesState();
 }
 
-class _GamesState extends State<spiderdetails> {
+class _GamesState extends State<Captaindetails> {
   @override
   Widget build(BuildContext context) {
     return ResponsiveSizer(builder: (context, orientation, screenType) {
@@ -22,19 +22,19 @@ class _GamesState extends State<spiderdetails> {
                 Container(
                     height: 190.w,
                     color: Colors.white,
-                    child: Image(image: AssetImage('assets/spider.png'),
+                    child: Image(image: AssetImage('assets/imgs/Captaindetails.png'),
                       width: 100.w,
-                      fit: BoxFit.fitWidth,
+                      fit: BoxFit.fitHeight,
                     )
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 480),
+                  padding: const EdgeInsets.only(top: 486),
                   child: Container(
                       color: Colors.black38,
                       height: 250,
                       child: Column(
                         children: [
-                          Text('Marvel\'s Spider-Man : Miles Morales ',
+                          Text('Marvel\'s Captain America ',
                             style: TextStyle(
                               fontWeight: FontWeight.w700,
                               fontFamily: 'Nunito',

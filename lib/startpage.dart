@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-import 'home.dart';
-
+import 'MHome/home.dart';
 
 class Startpage extends StatelessWidget {
   const Startpage({Key? key}) : super(key: key);
@@ -21,15 +20,15 @@ class Startpage extends StatelessWidget {
                   indicatorBackgroundColor: Colors.white38,
                   children: [
                     Image.asset(
-                      'assets/squid.png',
+                      'assets/imgs/squid.png',
                       fit: BoxFit.fitWidth,
                     ),
                     Image.asset(
-                      'assets/pubg.png',
+                      'assets/imgs/pubg.png',
                       fit: BoxFit.fitHeight,
                     ),
                     Image.asset(
-                      'assets/witch.png',
+                      'assets/imgs/witch.png',
                       fit: BoxFit.fitWidth,
                     ),
                   ],
